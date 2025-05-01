@@ -1,0 +1,31 @@
+/* Simple Selectors */
+p { color: red; } /* tagname */
+.classy { background: yellow; } /* class */
+#unique { font-weight: bold; } /* ID */
+
+/* Combinators */
+.combo div p { color: green; } /* descendant */
+.combo > p { color: blue; } /* child */
+.combo + p { color: orange; } /* adjacent sibling */
+.combo ~ p { color: purple; } /* general sibling */
+
+/* Pseudo-class */
+.pseudo a:hover { color: hotpink; }
+input:focus { border: 2px solid lime; }
+ul li:first-child { color: teal; }
+ul li:nth-child(2) { color: chocolate; }
+
+/* Pseudo-element */
+.before::before { content: "🔥 "; }
+.after::after { content: " 💯"; }
+::selection { background: black; color: white; }
+
+/* Attribute Selector */
+input[type="text"] { background: lightblue; }
+
+/* Universal Selector */
+* { font-family: sans-serif; }
+
+body {
+  padding: 30px;
+} 

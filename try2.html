@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Selectors All-in-One</title>
+  <link rel="stylesheet" href="CSS_1.css">
+</head>
+<body>
+
+  <h2>Simple Selectors 👇</h2>
+  <p>Tagname selector</p>
+  <p class="classy">Class selector</p>
+  <p id="unique">ID selector</p>
+
+  <hr>
+
+  <h2>Combinators 👇</h2>
+  <div class="combo">
+    <div>
+      <p>Descendant ✅</p>
+    </div>
+  </div>
+  <div class="combo">
+    <p>Child ✅</p>
+  </div>
+  <div class="combo"></div>
+  <p>Adjacent Sibling ✅</p>
+  <p>General Sibling ✅</p>
+
+  <hr>
+
+  <h2>Pseudo-classes 👇</h2>
+  <div class="pseudo">
+    <a href="#">Hover over me</a>
+  </div>
+  <input type="text" placeholder="Focus me"><br><br>
+  <ul>
+    <li>First child ✅</li>
+    <li>Second child ✅</li>
+    <li>Third child</li>
+  </ul>
+
+  <hr>
+
+  <h2>Pseudo-elements 👇</h2>
+  <p class="before">I'm using ::before</p>
+  <p class="after">I'm using ::after</p>
+  <p>Select this text to test ::selection</p>
+
+  <hr>
+
+  <h2>Attribute Selector 👇</h2>
+  <input type="text" placeholder="Attribute selector ✅">
+  <input type="password" placeholder="Not styled ❌">
+
+  <hr>
+
+  <h2>Universal Selector 👇</h2>
+  <p>Everything on this page uses the same font 🧢</p>
+
+</body>
+</html>
