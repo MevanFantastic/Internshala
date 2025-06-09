@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration System</title>
+    <meta name="description" content="Student registration system to add, edit, delete and manage student records.">
+    <link rel="stylesheet" href="student_portal_styles.css">
+</head>
+<body>
+    <header>
+        <h1>Student Registration System</h1>
+        <p>Register students and manage their records below.</p>
+    </header>
+    <main>
+        <section id="registration-form-section">
+            <h2>Register Student</h2>
+            <form id="student-form">
+                <div class="form-group">
+                    <label for="student-name">Student Name:</label>
+                    <input type="text" id="student-name" name="studentName" placeholder="Enter student name" required pattern="[A-Za-z\s]+" title="Alphabetic characters only">
+                </div>
+                <div class="form-group">
+                    <label for="student-id">Student ID:</label>
+                    <input type="text" id="student-id" name="studentID" placeholder="Enter student ID" required pattern="\d+" title="Numeric characters only">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email ID:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter email address" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-no">Contact No.:</label>
+                    <input type="text" id="contact-no" name="contactNo" placeholder="Enter contact number" required pattern="\d+" title="Numeric characters only">
+                </div>
+                <div class="form-group">
+                    <label for="student-class">Class:</label>
+                    <input type="text" id="student-class" name="studentClass" placeholder="Enter class" required>
+                </div>
+                <div class="form-group">
+                    <label for="student-address">Address:</label>
+                    <input type="text" id="student-address" name="studentAddress" placeholder="Enter address" required>
+                </div>
+                <button type="submit" id="submit-button">Add Student</button>
+            </form>
+        </section>
+        <section id="registered-students">
+            <h2>Registered Students</h2>
+            <div id="table-container">
+                <table id="student-table">
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Student ID</th>
+                            <th>Email ID</th>
+                            <th>Contact No.</th>
+                            <th>Class</th>
+                            <th>Address</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="student-table-body">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="student_portal_script.js" defer></script>
+   <footer style="margin-top: 40px; text-align: center;">
+    <p>Student Registration System - By Mevan Fernandes</p> <br>
+     <p>Git Repo link: <a href="" 
+        target="_blank">View on GitHub</a></p>
+   </footer>
+
+</body>
+</html>
