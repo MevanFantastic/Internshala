@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Weather App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body class="min-h-screen flex flex-col overflow-hidden">
+  <div class="clouds"></div>
+  <button id="themeToggle">🌓</button> <!-- dark mode to b fixed -->
+  <div class="flex-grow flex items-center justify-center px-4">
+    <div class="container max-w-4xl w-full p-6 bg-white bg-opacity-80 rounded-xl shadow-xl backdrop-blur-md relative">
+      <h1 class="text-4xl font-extrabold text-center mb-6 text-blue-700 drop-shadow-md tracking-wide">
+        🌤️ Weather Forecast
+      </h1>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mb-6 bg-white p-4 rounded-lg shadow-md">
+        <input id="cityInput" type="text" placeholder="Enter city name"
+               class="px-4 py-2 border border-blue-300 rounded-lg w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-blue-400">
+        <button id="searchBtn"
+                class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none transition duration-300">
+          Search
+        </button>
+        <button id="locationBtn"
+                class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 focus:outline-none transition duration-300">
+          Current Location
+        </button>
+        <select id="recentSelect" class="hidden mt-2 sm:mt-0 rounded-lg shadow-sm px-4 py-2 border border-blue-300">
+          <option value="" disabled selected>Recent Cities</option>
+        </select>
+      </div>
+
+      <p id="errorMsg" class="text-red-600 text-center mb-4"></p>
+
+      <div id="currentWeather" class="bg-white bg-opacity-90 p-4 rounded-xl shadow-md mb-6"></div>
+      <div id="forecast" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4"></div>
+    </div>
+  </div>
+  <footer class="w-full mt-auto text-center text-sm text-gray-600 dark:text-gray-400 py-4">
+    <p class="mb-2">🌦️ Weather App created by <span class="font-semibold text-blue-700 dark:text-blue-400">Mevan Fernandes</span></p>
+    <a href="https://github.com/your-username/your-repo" target="_blank"
+       class="inline-block px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-300">
+      GitHub Repo
+    </a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
